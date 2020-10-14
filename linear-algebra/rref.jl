@@ -28,7 +28,6 @@ function rref(mat::Matrix)
         # # end
         # add the pivot position to the array
         push!(pivot, (i, j))
-        println(pivot)
         # exchange the rows
         for itr1 in i : n
             ret[i, itr1], ret[k, itr1] = ret[k, itr1], ret[i, itr1]
