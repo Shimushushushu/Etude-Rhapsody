@@ -61,7 +61,7 @@ function plu(mat::Matrix)
         # left and right multiply $L$ with the same matrix
         similarity_transformation!(L, i, k)
         # `forward elimination'
-        for itr1 in (i + 1) : n
+        for itr1 in (i + 1) : m
             scaler = U[itr1, j] / U[i, j]
             for itr2 in j : n
                 U[itr1, itr2] -= U[i, itr2] * scaler
